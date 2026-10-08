@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+    <defs>
+      <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c1814" />
+        <stop offset="100%" stop-color="#040b08" />
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" rx="12" fill="url(#g5)" stroke="#1a2f26" stroke-width="2"/>
+    <circle cx="200" cy="180" r="70" fill="#0f221a" stroke="#60e314" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M175 180 L200 155 L225 180 M200 155 L200 215" stroke="#60e314" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="200" y="290" text-anchor="middle" fill="#ffffff" font-family="'Sora', sans-serif" font-weight="700" font-size="22">TRANSFORMAÇÃO #05</text>
+    <text x="200" y="325" text-anchor="middle" fill="#60e314" font-family="'Inter', sans-serif" font-weight="600" font-size="15">RESULTADO REAL DE ALUNO</text>
+    <rect x="60" y="370" width="280" height="42" rx="21" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="200" y="396" text-anchor="middle" fill="#a0aec0" font-family="'Inter', sans-serif" font-size="13">Avaliação &amp; Retorno 45 Dias</text>
+  </svg>

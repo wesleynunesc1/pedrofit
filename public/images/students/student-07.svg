@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350">
+    <defs>
+      <linearGradient id="gs7" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0e1f18" />
+        <stop offset="100%" stop-color="#040a08" />
+      </linearGradient>
+    </defs>
+    <rect width="500" height="350" rx="14" fill="url(#gs7)" stroke="#1f4232" stroke-width="2"/>
+    <circle cx="250" cy="140" r="60" fill="#143427" stroke="#60e314" stroke-width="2"/>
+    <text x="250" y="148" text-anchor="middle" fill="#60e314" font-family="'Sora', sans-serif" font-weight="800" font-size="28">ALUNO #07</text>
+    <text x="250" y="235" text-anchor="middle" fill="#ffffff" font-family="'Sora', sans-serif" font-weight="700" font-size="20">Acompanhamento Ativo</text>
+    <text x="250" y="265" text-anchor="middle" fill="#a0aec0" font-family="'Inter', sans-serif" font-size="14">Treino &amp; Dieta Personalizados</text>
+    <rect x="150" y="290" width="200" height="32" rx="16" fill="rgba(96,227,20,0.12)" stroke="#60e314"/>
+    <text x="250" y="311" text-anchor="middle" fill="#60e314" font-family="'Inter', sans-serif" font-weight="600" font-size="12">PROTOCOLOS PERSONALIZADOS</text>
+  </svg>

@@ -1,0 +1,48 @@
+:root {
+  /* Colors */
+  --bg-primary: #060f0c;
+  --bg-secondary: #040907;
+  --bg-card: #0c1814;
+  --bg-card-hover: #10211b;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-soft: rgba(255, 255, 255, 0.06);
+  --surface-glass: rgba(6, 15, 12, 0.82);
+  
+  --green-primary: #60e314;
+  --green-light: #7bf538;
+  --green-dark: #02ae00;
+  --green-glow: rgba(96, 227, 20, 0.35);
+  --green-glow-subtle: rgba(96, 227, 20, 0.12);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-green: rgba(96, 227, 20, 0.3);
+  
+  --red-accent: #f93819;
+  --red-bg: rgba(249, 56, 25, 0.08);
+  --red-border: rgba(249, 56, 25, 0.25);
+  
+  /* Typography */
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Timings */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-fast: 220ms;
+  --duration-normal: 500ms;
+  --duration-slow: 800ms;
+  
+  /* Container widths */
+  --max-width: 1240px;
+  --header-height: 76px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 62px;
+  }
+}

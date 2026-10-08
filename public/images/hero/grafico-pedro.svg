@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="rgCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60e314" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#060f0c" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#060f0c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60e314"/>
+      <stop offset="50%" stop-color="#02ae00"/>
+      <stop offset="100%" stop-color="#1fd9b6"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="250" cy="250" r="230" fill="url(#rgCenter)"/>
+  <circle cx="250" cy="250" r="210" fill="none" stroke="#1f4232" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="250" cy="250" r="180" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="150" fill="none" stroke="#25553e" stroke-width="1.5" stroke-dasharray="4 6"/>
+  
+  <circle cx="250" cy="250" r="110" fill="#091912" stroke="url(#ringGrad)" stroke-width="3"/>
+  <circle cx="250" cy="250" r="95" fill="#040b08" stroke="#163a2a" stroke-width="2"/>
+  
+  <text x="250" y="235" text-anchor="middle" fill="#60e314" font-family="'Sora', sans-serif" font-weight="900" font-size="34" letter-spacing="2">MÉTODO</text>
+  <text x="250" y="275" text-anchor="middle" fill="#ffffff" font-family="'Sora', sans-serif" font-weight="800" font-size="26" letter-spacing="1">PEDRO FIT</text>
+  <text x="250" y="305" text-anchor="middle" fill="#a0aec0" font-family="'Inter', sans-serif" font-size="12" letter-spacing="3">TRANSFORMAÇÃO 360°</text>
+  
+  <circle cx="250" cy="40" r="12" fill="#60e314"/>
+  <circle cx="460" cy="250" r="12" fill="#60e314"/>
+  <circle cx="250" cy="460" r="12" fill="#60e314"/>
+  <circle cx="40" cy="250" r="12" fill="#60e314"/>
+</svg>
