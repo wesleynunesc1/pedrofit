@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
         backgroundColor: '#060f0c'
       }}
     >
-      {/* 1. Camada da Foto de Fundo (No desktop fica à direita; no mobile fica no topo 50%) */}
+      {/* 1. Camada da Foto de Fundo (Foto 9a de fundo tanto para desktop como mobile) */}
       <div
         className="hero-bg-photo"
         style={{
@@ -33,14 +33,14 @@ export const Hero: React.FC = () => {
         }}
       >
         <img
-          src="/images/hero/hero-bg-pedro.jpeg"
+          src="/images/hero/hero-9a.png"
           alt="Pedro Lima Personal Trainer"
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center 18%',
-            filter: 'contrast(1.1) brightness(0.95)'
+            objectPosition: 'center 12%',
+            filter: 'contrast(1.08) brightness(0.96)'
           }}
         />
 
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
         />
       </div>
 
-      {/* 2. Degradê específico para MOBILE: Foto 100% nítida no topo e fade suave para o fundo escuro */}
+      {/* 2. Degradê específico para MOBILE: foto de fundo com ótima legibilidade */}
       <div className="hero-mobile-gradient-overlay" />
 
       {/* 3. Degradê geral no Desktop */}
@@ -106,11 +106,12 @@ export const Hero: React.FC = () => {
             alignItems: 'center'
           }}
         >
-          {/* Coluna de Textos (No mobile recebe o espaçamento de 48vh para ficar ~50% longe do topo) */}
+          {/* Coluna de Textos */}
           <div className="hero-content-col" style={{ maxWidth: '640px' }}>
             {/* Selo de Prova Social */}
             <RevealOnScroll delay={100}>
               <div
+                className="hero-social-proof"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -180,6 +181,7 @@ export const Hero: React.FC = () => {
             {/* Headline H1 */}
             <RevealOnScroll delay={200}>
               <h1
+                className="hero-headline"
                 style={{
                   fontSize: 'clamp(28px, 4.2vw, 50px)',
                   fontWeight: 800,
@@ -197,6 +199,7 @@ export const Hero: React.FC = () => {
             {/* Texto Explicativo */}
             <RevealOnScroll delay={300}>
               <p
+                className="hero-description"
                 style={{
                   fontSize: 'clamp(15px, 1.8vw, 17px)',
                   color: 'var(--text-secondary)',
@@ -211,7 +214,7 @@ export const Hero: React.FC = () => {
 
             {/* Botão de Ação Principal e Microcopy */}
             <RevealOnScroll delay={400}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div className="hero-cta-wrapper" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <a
                   href={CONFIG.whatsappUrl}
                   target="_blank"
@@ -229,6 +232,7 @@ export const Hero: React.FC = () => {
                 </a>
 
                 <div
+                  className="hero-microcopy"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -266,26 +270,28 @@ export const Hero: React.FC = () => {
         @media (max-width: 992px) {
           .hero-section-root {
             min-height: auto !important;
-            padding-top: 0 !important;
-            padding-bottom: 50px !important;
-            align-items: flex-start !important;
+            padding-top: 50px !important;
+            padding-bottom: 60px !important;
+            align-items: center !important;
           }
 
-          /* Foto do Pedro ocupa o topo com destaque total */
+          /* Foto 9a de fundo no mobile ocupando toda a hero */
           .hero-bg-photo {
             top: 0 !important;
             left: 0 !important;
             right: 0 !important;
+            bottom: 0 !important;
             width: 100% !important;
-            height: 52vh !important;
-            min-height: 360px !important;
-            max-height: 480px !important;
+            height: 100% !important;
+            min-height: 100% !important;
+            max-height: none !important;
             opacity: 1 !important;
+            z-index: 0 !important;
           }
 
           .hero-bg-photo img {
-            object-position: center 12% !important;
-            filter: contrast(1.08) brightness(0.96) !important;
+            object-position: center 10% !important;
+            filter: contrast(1.06) brightness(0.85) !important;
           }
 
           .hero-desktop-hgradient,
@@ -294,53 +300,119 @@ export const Hero: React.FC = () => {
             display: none !important;
           }
 
-          /* Degradê no mobile: topo nítido, transição no meio e 100% preto abaixo para o texto */
+          /* Degradê de fundo escuro para garantir leitura nítida das informações centralizadas */
           .hero-mobile-gradient-overlay {
             display: block !important;
             position: absolute;
             inset: 0;
             background: linear-gradient(
               to bottom,
-              rgba(6, 15, 12, 0.2) 0%,
-              transparent 20%,
-              rgba(6, 15, 12, 0.45) 36%,
-              rgba(6, 15, 12, 0.88) 46%,
-              #060f0c 53%,
+              rgba(6, 15, 12, 0.78) 0%,
+              rgba(6, 15, 12, 0.65) 25%,
+              rgba(6, 15, 12, 0.88) 65%,
               #060f0c 100%
             ) !important;
             z-index: 1;
             pointer-events: none;
           }
 
-          /* Textos afastados cerca de 46-50% do topo da tela */
-          .hero-content-col {
-            padding-top: calc(47vh - 20px) !important;
-            max-width: 100% !important;
-          }
-
+          /* Informações centralizadas no meio da hero no mobile */
           .hero-grid {
             grid-template-columns: 1fr !important;
-            gap: 20px !important;
+            gap: 0 !important;
+            justify-items: center !important;
+          }
+
+          .hero-content-col {
+            padding-top: 0 !important;
+            max-width: 580px !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+
+          .hero-social-proof {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            justify-content: center !important;
+            text-align: center !important;
+          }
+
+          .hero-headline {
+            text-align: center !important;
+          }
+
+          .hero-description {
+            text-align: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+
+          .hero-cta-wrapper {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
           }
 
           .hero-btn {
-            align-self: flex-start !important;
+            align-self: center !important;
+            margin: 0 auto !important;
             width: auto !important;
             max-width: 100% !important;
-            padding: 12px 22px !important;
-            font-size: 12.5px !important;
+            padding: 13px 26px !important;
+            font-size: 13.5px !important;
+            white-space: nowrap !important;
+          }
+
+          .hero-microcopy {
+            justify-content: center !important;
+            text-align: center !important;
           }
         }
 
         @media (max-width: 480px) {
-          .hero-pill-badge {
-            font-size: 11.5px !important;
-            padding: 5px 12px 5px 6px !important;
-            gap: 8px !important;
+          .hero-section-root {
+            padding-top: 36px !important;
+            padding-bottom: 48px !important;
           }
+
+          .hero-social-proof {
+            font-size: 11px !important;
+            padding: 5px 12px 5px 6px !important;
+            gap: 7px !important;
+            margin-bottom: 16px !important;
+            max-width: 100% !important;
+          }
+
+          .hero-social-proof span {
+            font-size: 11.5px !important;
+            line-height: 1.3 !important;
+          }
+
+          .hero-headline {
+            font-size: clamp(26px, 7.6vw, 36px) !important;
+            margin-bottom: 16px !important;
+          }
+
+          .hero-description {
+            font-size: 14.5px !important;
+            line-height: 1.6 !important;
+            margin-bottom: 24px !important;
+          }
+
           .hero-btn {
-            padding: 11px 18px !important;
-            font-size: 12px !important;
+            padding: 12px 22px !important;
+            font-size: 12.5px !important;
+            gap: 6px !important;
+          }
+
+          .hero-microcopy {
+            font-size: 11.5px !important;
+            gap: 6px !important;
           }
         }
       `}</style>

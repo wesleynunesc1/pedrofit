@@ -226,9 +226,10 @@ export const ResultsCarousels: React.FC = () => {
           .results-cta-btn {
             width: auto !important;
             max-width: 100% !important;
-            padding: 11px 20px !important;
-            font-size: 12px !important;
-            gap: 8px !important;
+            padding: 10px 18px !important;
+            font-size: 11.5px !important;
+            white-space: nowrap !important;
+            gap: 7px !important;
           }
         }
       `}</style>

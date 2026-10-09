@@ -86,6 +86,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  white-space: nowrap;
   background-color: var(--green-primary);
   color: #040d07;
   font-family: var(--font-heading);

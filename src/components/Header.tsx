@@ -73,7 +73,7 @@ export const Header: React.FC = () => {
         </a>
 
         {/* Action Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }} className="header-actions">
           {/* Secondary Button: Dúvidas */}
           <a
             href={CONFIG.whatsappUrl}
@@ -82,10 +82,11 @@ export const Header: React.FC = () => {
             className="btn-secondary"
             style={{
               padding: '10px 18px',
-              fontSize: '13px'
+              fontSize: '13px',
+              whiteSpace: 'nowrap'
             }}
           >
-            <HelpCircle size={16} />
+            <HelpCircle size={15} />
             <span className="hide-on-very-small">DÚVIDAS</span>
           </a>
 
@@ -96,32 +97,74 @@ export const Header: React.FC = () => {
             rel="noopener noreferrer"
             className="btn-cta header-cta-btn"
             style={{
-              padding: '10px 20px',
-              fontSize: '13px'
+              padding: '9px 18px',
+              fontSize: '12.5px',
+              whiteSpace: 'nowrap'
             }}
           >
             <span>FALAR NO WHATSAPP</span>
-            <ChevronRight size={16} strokeWidth={3} />
+            <ChevronRight size={15} strokeWidth={3} />
           </a>
         </div>
       </div>
 
       <style>{`
+        @media (max-width: 768px) {
+          .header-actions {
+            gap: 8px !important;
+          }
+          .header-cta-btn {
+            white-space: nowrap !important;
+            padding: 8px 14px !important;
+            font-size: 11.5px !important;
+            gap: 5px !important;
+          }
+          .header-cta-btn svg {
+            width: 14px !important;
+            height: 14px !important;
+          }
+        }
         @media (max-width: 480px) {
           .header-logo-img {
-            height: 28px !important;
-            max-width: 125px !important;
+            height: 27px !important;
+            max-width: 115px !important;
           }
           .hide-on-very-small {
             display: none;
           }
           .btn-secondary {
-            padding: 7px 10px !important;
-            font-size: 11px !important;
+            padding: 6px 9px !important;
+            font-size: 10px !important;
+            gap: 4px !important;
+          }
+          .btn-secondary svg {
+            width: 13px !important;
+            height: 13px !important;
           }
           .header-cta-btn {
-            padding: 8px 13px !important;
-            font-size: 11px !important;
+            white-space: nowrap !important;
+            padding: 6.5px 11px !important;
+            font-size: 10.5px !important;
+            gap: 4px !important;
+            letter-spacing: 0.2px !important;
+          }
+          .header-cta-btn svg {
+            width: 13px !important;
+            height: 13px !important;
+          }
+        }
+        @media (max-width: 360px) {
+          .header-logo-img {
+            height: 24px !important;
+            max-width: 100px !important;
+          }
+          .btn-secondary {
+            padding: 5px 8px !important;
+            font-size: 9.5px !important;
+          }
+          .header-cta-btn {
+            padding: 6px 9px !important;
+            font-size: 9.5px !important;
           }
         }
       `}</style>

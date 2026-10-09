@@ -74,9 +74,6 @@ export const Footer: React.FC = () => {
             <a href="#resultados" style={{ fontSize: '14px', color: 'var(--text-secondary)' }} className="footer-nav-link">
               Resultados
             </a>
-            <a href="#comparativo" style={{ fontSize: '14px', color: 'var(--text-secondary)' }} className="footer-nav-link">
-              Comparativo
-            </a>
             <a href="#sobre" style={{ fontSize: '14px', color: 'var(--text-secondary)' }} className="footer-nav-link">
               Sobre
             </a>

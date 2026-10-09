@@ -162,13 +162,14 @@ export const AboutPedro: React.FC = () => {
                     }}
                   >
                     <img
-                      src="/images/about/pedro-about.jpeg"
+                      src="/images/about/pedro-7a.png"
                       alt="Pedro Lima Personal Trainer"
                       style={{
                         width: '100%',
                         height: 'auto',
                         maxHeight: '540px',
                         objectFit: 'cover',
+                        objectPosition: 'center 12%',
                         display: 'block'
                       }}
                     />
@@ -275,9 +276,10 @@ export const AboutPedro: React.FC = () => {
             {/* 4. FOTO GRANDE DO PEDRO DE BRAÇOS CRUZADOS */}
             <div className="about-mobile-photo-frame">
               <img
-                src="/images/about/pedro-mobile.jpg"
+                src="/images/about/pedro-7a.png"
                 alt="Pedro Lima Personal Trainer"
                 className="about-mobile-photo"
+                style={{ objectPosition: 'center 10%' }}
               />
               {/* Fade overlays for seamless blend */}
               <div className="about-mobile-photo-fade-top" />
@@ -547,13 +549,14 @@ export const AboutPedro: React.FC = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             width: 100%;
-            height: 58px;
+            height: 48px;
+            white-space: nowrap !important;
             background-color: #60e314;
             color: #000000;
             font-family: var(--font-heading);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 800;
             letter-spacing: 0.2px;
             text-decoration: none;
@@ -613,9 +616,10 @@ export const AboutPedro: React.FC = () => {
             font-size: 11px;
           }
           .about-mobile-cta-btn {
-            font-size: 13px;
-            height: 54px;
-            gap: 6px;
+            font-size: 11.5px !important;
+            height: 44px !important;
+            gap: 6px !important;
+            white-space: nowrap !important;
           }
           .about-mobile-proof-item {
             font-size: 9.8px;
