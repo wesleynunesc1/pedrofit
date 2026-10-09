@@ -34,7 +34,9 @@ export const Hero: React.FC = () => {
       >
         <img
           src="/images/hero/hero-9a.png"
-          alt="Pedro Lima Personal Trainer"
+          alt="Pedro Lima Personal Trainer - Consultoria Online Pedro Fit"
+          fetchPriority="high"
+          decoding="async"
           style={{
             width: '100%',
             height: '100%',

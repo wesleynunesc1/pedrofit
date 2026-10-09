@@ -1,0 +1,6 @@
+# robots.txt for Pedro Fit
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pedrofit.com.br/sitemap.xml

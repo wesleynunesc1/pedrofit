@@ -60,7 +60,9 @@ export const Header: React.FC = () => {
         >
           <img
             src="/images/logo/logo-pedro.png"
-            alt="Pedro Fit"
+            alt="Pedro Fit - Consultoria Online de Treino e Dieta"
+            width="190"
+            height="42"
             style={{
               height: '42px',
               width: 'auto',

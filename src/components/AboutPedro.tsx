@@ -163,7 +163,9 @@ export const AboutPedro: React.FC = () => {
                   >
                     <img
                       src="/images/about/pedro-7a.png"
-                      alt="Pedro Lima Personal Trainer"
+                      alt="Pedro Lima Personal Trainer e Mentor de Performance - Pedro Fit"
+                      loading="lazy"
+                      decoding="async"
                       style={{
                         width: '100%',
                         height: 'auto',
@@ -279,7 +281,9 @@ export const AboutPedro: React.FC = () => {
             <div className="about-mobile-photo-frame">
               <img
                 src="/images/about/pedro-7a.png"
-                alt="Pedro Lima Personal Trainer"
+                alt="Pedro Lima Personal Trainer - Consultoria Online Pedro Fit"
+                loading="lazy"
+                decoding="async"
                 className="about-mobile-photo"
               />
               {/* Degradê inferior suave */}

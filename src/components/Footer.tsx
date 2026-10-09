@@ -36,7 +36,11 @@ export const Footer: React.FC = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             <img
               src="/images/logo/logo-pedro.png"
-              alt="Pedro Fit"
+              alt="Pedro Fit - Consultoria Online de Treino e Dieta"
+              width="180"
+              height="38"
+              loading="lazy"
+              decoding="async"
               style={{
                 height: '38px',
                 width: 'auto',
