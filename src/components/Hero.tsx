@@ -39,10 +39,16 @@ export const Hero: React.FC = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center 12%',
-            filter: 'contrast(1.08) brightness(0.96)'
+            objectPosition: '54% 56%',
+            filter: 'contrast(1.08) brightness(0.98)'
           }}
         />
+
+        {/* Tag frisando o Personal no mobile (aparece sobre o rodapé da foto) */}
+        <div className="hero-photo-personal-tag">
+          <span className="hero-personal-tag-dot" />
+          <span>Pedro Lima • Personal Trainer</span>
+        </div>
 
         {/* Degradê horizontal no desktop */}
         <div
@@ -50,7 +56,7 @@ export const Hero: React.FC = () => {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to right, #060f0c 0%, rgba(6, 15, 12, 0.8) 25%, rgba(6, 15, 12, 0.35) 60%, rgba(6, 15, 12, 0.1) 100%)'
+            background: 'linear-gradient(to right, #060f0c 0%, rgba(6, 15, 12, 0.72) 20%, rgba(6, 15, 12, 0.25) 55%, transparent 85%)'
           }}
         />
 
@@ -60,7 +66,7 @@ export const Hero: React.FC = () => {
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, #060f0c 0%, transparent 12%, transparent 78%, #060f0c 100%)'
+            background: 'linear-gradient(to bottom, #060f0c 0%, transparent 14%, transparent 82%, #060f0c 100%)'
           }}
         />
 
@@ -78,18 +84,18 @@ export const Hero: React.FC = () => {
             pointerEvents: 'none'
           }}
         />
+
+        {/* Degradê suave de fusão no rodapé da foto para mobile */}
+        <div className="hero-mobile-bottom-fade" />
       </div>
 
-      {/* 2. Degradê específico para MOBILE: foto de fundo com ótima legibilidade */}
-      <div className="hero-mobile-gradient-overlay" />
-
-      {/* 3. Degradê geral no Desktop */}
+      {/* 2. Degradê geral no Desktop */}
       <div
         className="hero-main-gradient"
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(90deg, #060f0c 0%, #060f0c 40%, rgba(6, 15, 12, 0.88) 55%, rgba(6, 15, 12, 0.25) 75%, transparent 100%)',
+          background: 'linear-gradient(90deg, #060f0c 0%, #060f0c 36%, rgba(6, 15, 12, 0.72) 52%, rgba(6, 15, 12, 0.15) 70%, transparent 100%)',
           pointerEvents: 'none',
           zIndex: 1
         }}
@@ -250,7 +256,7 @@ export const Hero: React.FC = () => {
                       boxShadow: '0 0 8px var(--green-primary)'
                     }}
                   />
-                  <span>Acompanhamento direto no WhatsApp • Vagas limitadas por mês</span>
+                  <span>Vagas limitadas para este mês</span>
                 </div>
               </div>
             </RevealOnScroll>
@@ -261,7 +267,10 @@ export const Hero: React.FC = () => {
       <style>{`
         /* Desktop styles */
         @media (min-width: 993px) {
-          .hero-mobile-gradient-overlay {
+          .hero-photo-personal-tag {
+            display: none !important;
+          }
+          .hero-mobile-bottom-fade {
             display: none !important;
           }
         }
@@ -269,29 +278,36 @@ export const Hero: React.FC = () => {
         /* Mobile & Tablet styles */
         @media (max-width: 992px) {
           .hero-section-root {
+            display: flex !important;
+            flex-direction: column !important;
             min-height: auto !important;
-            padding-top: 50px !important;
-            padding-bottom: 60px !important;
-            align-items: center !important;
+            padding-top: 0 !important;
+            padding-bottom: 50px !important;
+            align-items: stretch !important;
           }
 
-          /* Foto 9a de fundo no mobile ocupando toda a hero */
+          /* Foto do Pedro em destaque no topo frisando o personal */
           .hero-bg-photo {
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            bottom: auto !important;
             width: 100% !important;
-            height: 100% !important;
-            min-height: 100% !important;
-            max-height: none !important;
+            height: 380px !important;
+            max-height: 48vh !important;
+            min-height: 320px !important;
             opacity: 1 !important;
-            z-index: 0 !important;
+            z-index: 1 !important;
+            overflow: hidden !important;
           }
 
           .hero-bg-photo img {
-            object-position: center 10% !important;
-            filter: contrast(1.06) brightness(0.85) !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center 30% !important;
+            filter: contrast(1.08) brightness(1.0) !important;
           }
 
           .hero-desktop-hgradient,
@@ -300,23 +316,65 @@ export const Hero: React.FC = () => {
             display: none !important;
           }
 
-          /* Degradê de fundo escuro para garantir leitura nítida das informações centralizadas */
-          .hero-mobile-gradient-overlay {
+          /* Suave fade escuro no final da foto para integrar ao fundo */
+          .hero-mobile-bottom-fade {
             display: block !important;
-            position: absolute;
-            inset: 0;
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 130px !important;
             background: linear-gradient(
               to bottom,
-              rgba(6, 15, 12, 0.78) 0%,
-              rgba(6, 15, 12, 0.65) 25%,
-              rgba(6, 15, 12, 0.88) 65%,
+              transparent 0%,
+              rgba(6, 15, 12, 0.45) 50%,
               #060f0c 100%
             ) !important;
-            z-index: 1;
-            pointer-events: none;
+            pointer-events: none !important;
+            z-index: 2 !important;
           }
 
-          /* Informações centralizadas no meio da hero no mobile */
+          /* Tag frisando o Personal no rodapé da foto */
+          .hero-photo-personal-tag {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            position: absolute !important;
+            bottom: 16px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            background: rgba(6, 15, 12, 0.78) !important;
+            border: 1px solid rgba(96, 227, 20, 0.4) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            padding: 6px 16px !important;
+            border-radius: 9999px !important;
+            color: #ffffff !important;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.3px !important;
+            white-space: nowrap !important;
+            z-index: 3 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 12px rgba(96, 227, 20, 0.25) !important;
+          }
+
+          .hero-personal-tag-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--green-primary);
+            box-shadow: 0 0 8px var(--green-primary);
+          }
+
+          /* Informações posicionadas abaixo da foto */
+          .hero-section-root .container {
+            position: relative !important;
+            z-index: 2 !important;
+            margin-top: 10px !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
+
           .hero-grid {
             grid-template-columns: 1fr !important;
             gap: 0 !important;
@@ -336,18 +394,25 @@ export const Hero: React.FC = () => {
           .hero-social-proof {
             margin-left: auto !important;
             margin-right: auto !important;
+            margin-bottom: 20px !important;
             justify-content: center !important;
             text-align: center !important;
           }
 
           .hero-headline {
             text-align: center !important;
+            font-size: clamp(28px, 6.2vw, 40px) !important;
+            line-height: 1.2 !important;
+            margin-bottom: 16px !important;
           }
 
           .hero-description {
             text-align: center !important;
             margin-left: auto !important;
             margin-right: auto !important;
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+            margin-bottom: 24px !important;
           }
 
           .hero-cta-wrapper {
@@ -375,9 +440,15 @@ export const Hero: React.FC = () => {
         }
 
         @media (max-width: 480px) {
-          .hero-section-root {
-            padding-top: 36px !important;
-            padding-bottom: 48px !important;
+          .hero-bg-photo {
+            height: 330px !important;
+            min-height: 300px !important;
+          }
+
+          .hero-section-root .container {
+            margin-top: 8px !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
           }
 
           .hero-social-proof {
@@ -394,24 +465,27 @@ export const Hero: React.FC = () => {
           }
 
           .hero-headline {
-            font-size: clamp(26px, 7.6vw, 36px) !important;
-            margin-bottom: 16px !important;
+            font-size: clamp(25px, 7.4vw, 32px) !important;
+            margin-bottom: 14px !important;
           }
 
           .hero-description {
-            font-size: 14.5px !important;
-            line-height: 1.6 !important;
-            margin-bottom: 24px !important;
+            font-size: 14px !important;
+            line-height: 1.55 !important;
+            margin-bottom: 22px !important;
           }
 
           .hero-btn {
             padding: 12px 22px !important;
             font-size: 12.5px !important;
             gap: 6px !important;
+            width: 100% !important;
+            max-width: 320px !important;
+            justify-content: center !important;
           }
 
           .hero-microcopy {
-            font-size: 11.5px !important;
+            font-size: 11px !important;
             gap: 6px !important;
           }
         }

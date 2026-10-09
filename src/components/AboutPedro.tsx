@@ -252,15 +252,17 @@ export const AboutPedro: React.FC = () => {
       </div>
 
       {/* =========================================================
-          MOBILE VIEW (Strictly following the 9-step hierarchy)
+          MOBILE VIEW (Visually optimized, premium mobile experience)
           ========================================================= */}
       <div className="about-mobile-view">
         <div className="about-mobile-container">
           <RevealOnScroll>
             {/* 1. SELO SUPERIOR */}
-            <div className="about-mobile-badge">
-              <UserCheck size={14} color="#60e314" strokeWidth={2.4} />
-              <span>SEU MENTOR NESSA JORNADA</span>
+            <div className="about-mobile-badge-wrapper">
+              <div className="about-mobile-badge">
+                <UserCheck size={14} color="#60e314" strokeWidth={2.4} />
+                <span>SEU MENTOR NESSA JORNADA</span>
+              </div>
             </div>
 
             {/* 2. TÍTULO PEDRO LIMA */}
@@ -270,63 +272,91 @@ export const AboutPedro: React.FC = () => {
 
             {/* 3. FRASE PRINCIPAL */}
             <p className="about-mobile-lead">
-              Treino, nutrição e acompanhamento pensados para a sua rotina.
+              Treino inteligente, nutrição estratégica e acompanhamento direto para a sua rotina real.
             </p>
 
-            {/* 4. FOTO GRANDE DO PEDRO DE BRAÇOS CRUZADOS */}
+            {/* 4. FOTO DO PEDRO COM ENQUADRAMENTO PERFEITO */}
             <div className="about-mobile-photo-frame">
               <img
                 src="/images/about/pedro-7a.png"
                 alt="Pedro Lima Personal Trainer"
                 className="about-mobile-photo"
-                style={{ objectPosition: 'center 10%' }}
               />
-              {/* Fade overlays for seamless blend */}
-              <div className="about-mobile-photo-fade-top" />
+              {/* Degradê inferior suave */}
               <div className="about-mobile-photo-fade-bottom" />
-              <div className="about-mobile-photo-fade-sides" />
+
+              {/* Tag de autoridade sobre a foto */}
+              <div className="about-mobile-photo-badge">
+                <Award size={14} color="#60e314" />
+                <span>Treinador & Consultoria Online</span>
+              </div>
             </div>
 
-            {/* 5. PRIMEIRO TEXTO EXPLICATIVO */}
+            {/* 5. STATS BAR DE AUTORIDADE */}
+            <div className="about-mobile-stats-row">
+              <div className="about-mobile-stat-box">
+                <span className="about-mobile-stat-num">+100</span>
+                <span className="about-mobile-stat-lbl">Alunos Atendidos</span>
+              </div>
+              <div className="about-mobile-stat-div" />
+              <div className="about-mobile-stat-box">
+                <span className="about-mobile-stat-num">100%</span>
+                <span className="about-mobile-stat-lbl">Personalizado</span>
+              </div>
+              <div className="about-mobile-stat-div" />
+              <div className="about-mobile-stat-box">
+                <span className="about-mobile-stat-num">Direto</span>
+                <span className="about-mobile-stat-lbl">no WhatsApp</span>
+              </div>
+            </div>
+
+            {/* 6. PRIMEIRO TEXTO EXPLICATIVO */}
             <p className="about-mobile-text">
-              Depois de acompanhar de perto pessoas que treinavam duro, mas continuavam presas a métodos genéricos, criei uma consultoria baseada em{' '}
+              Depois de ver tantas pessoas dedicadas treinando duro mas presas a fichas genéricas e dietas insustentáveis, criei uma consultoria baseada em{' '}
               <strong className="text-highlight-green">
-                estratégia, individualização e acompanhamento real.
+                ciência prática, estratégia individual e acompanhamento humano de verdade.
               </strong>
             </p>
 
-            {/* 6. TRÊS MINI CARDS DE BENEFÍCIOS */}
-            <div className="about-mobile-cards-grid">
-              <div className="about-mobile-card">
-                <div className="about-mobile-card-icon">
-                  <Dumbbell size={18} color="#60e314" strokeWidth={2.2} />
+            {/* 7. PILARES DO MÉTODO EM CARDS HORIZONTAIS E ELEGANTES */}
+            <div className="about-mobile-pillars-list">
+              <div className="about-mobile-pillar-card">
+                <div className="about-mobile-pillar-icon">
+                  <Dumbbell size={18} color="#60e314" strokeWidth={2.4} />
                 </div>
-                <span className="about-mobile-card-title">Periodização personalizada</span>
+                <div className="about-mobile-pillar-info">
+                  <span className="about-mobile-pillar-title">Periodização Personalizada</span>
+                  <span className="about-mobile-pillar-desc">Treinos desenhados sob medida para suas metas e tempo disponível.</span>
+                </div>
               </div>
 
-              <div className="about-mobile-card">
-                <div className="about-mobile-card-icon">
-                  <Apple size={18} color="#60e314" strokeWidth={2.2} />
+              <div className="about-mobile-pillar-card">
+                <div className="about-mobile-pillar-icon">
+                  <Apple size={18} color="#60e314" strokeWidth={2.4} />
                 </div>
-                <span className="about-mobile-card-title">Estratégia alimentar prática</span>
+                <div className="about-mobile-pillar-info">
+                  <span className="about-mobile-pillar-title">Estratégia Alimentar Prática</span>
+                  <span className="about-mobile-pillar-desc">Dieta flexível que cabe no seu bolso e no seu dia a dia, sem passar fome.</span>
+                </div>
               </div>
 
-              <div className="about-mobile-card">
-                <div className="about-mobile-card-icon">
-                  <MessageCircle size={18} color="#60e314" strokeWidth={2.2} />
+              <div className="about-mobile-pillar-card">
+                <div className="about-mobile-pillar-icon">
+                  <MessageCircle size={18} color="#60e314" strokeWidth={2.4} />
                 </div>
-                <span className="about-mobile-card-title">Suporte direto via WhatsApp</span>
+                <div className="about-mobile-pillar-info">
+                  <span className="about-mobile-pillar-title">Suporte Diário no WhatsApp</span>
+                  <span className="about-mobile-pillar-desc">Envie vídeos dos exercícios, tire dúvidas e receba ajustes contínuos.</span>
+                </div>
               </div>
             </div>
 
-            {/* 7. SEGUNDO TEXTO COM PROVA / RESULTADO */}
+            {/* 8. PROVA SOCIAL / ALCANCE */}
             <p className="about-mobile-text about-mobile-text-proof">
-              Hoje, o Método Pedro Fit já transformou{' '}
-              <strong className="text-highlight-green">dezenas de vidas</strong> em diversos estados e países, com um acompanhamento{' '}
-              <strong className="text-highlight-green">100% online</strong> que é tão eficaz quanto o presencial.
+              Já transformamos dezenas de vidas em diversos estados e países com um método 100% online que é tão ou mais eficaz que o presencial.
             </p>
 
-            {/* 8. BOTÃO PRINCIPAL (CTA) */}
+            {/* 9. BOTÃO PRINCIPAL (CTA) */}
             <div className="about-mobile-cta-wrapper">
               <a
                 href={CONFIG.whatsappUrl}
@@ -340,7 +370,7 @@ export const AboutPedro: React.FC = () => {
               </a>
             </div>
 
-            {/* 9. MICROPROVAS ABAIXO DO BOTÃO */}
+            {/* 10. MICROPROVAS ABAIXO DO BOTÃO */}
             <div className="about-mobile-microproofs">
               <div className="about-mobile-proof-item">
                 <CheckCircle2 size={13} color="#60e314" strokeWidth={2.5} />
@@ -352,7 +382,7 @@ export const AboutPedro: React.FC = () => {
               </div>
               <div className="about-mobile-proof-item">
                 <CheckCircle2 size={13} color="#60e314" strokeWidth={2.5} />
-                <span>Acompanhamento próximo</span>
+                <span>Acompanhamento direto</span>
               </div>
             </div>
           </RevealOnScroll>
@@ -375,13 +405,13 @@ export const AboutPedro: React.FC = () => {
           }
           .about-mobile-view {
             display: block !important;
-            padding-top: 76px;
-            padding-bottom: 84px;
+            padding-top: 60px;
+            padding-bottom: 70px;
           }
 
           .about-mobile-container {
             width: 100%;
-            max-width: 430px;
+            max-width: 480px;
             margin: 0 auto;
             padding-left: 20px;
             padding-right: 20px;
@@ -389,32 +419,37 @@ export const AboutPedro: React.FC = () => {
           }
 
           /* 1. SELO SUPERIOR */
+          .about-mobile-badge-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 14px;
+          }
+
           .about-mobile-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            height: 38px;
-            padding: 0 16px;
+            height: 34px;
+            padding: 0 14px;
             border-radius: 999px;
-            background: rgba(96, 227, 20, 0.07);
+            background: rgba(96, 227, 20, 0.08);
             border: 1px solid rgba(96, 227, 20, 0.35);
             color: #60e314;
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 18px;
+            letter-spacing: 1px;
           }
 
           /* 2. TÍTULO PEDRO LIMA */
           .about-mobile-title {
             font-family: var(--font-heading);
-            font-size: clamp(48px, 13vw, 60px);
+            font-size: clamp(34px, 8.5vw, 42px);
             font-weight: 900;
             color: #ffffff;
-            line-height: 1.05;
-            letter-spacing: -0.8px;
-            margin: 0 0 12px 0;
+            line-height: 1.12;
+            letter-spacing: -0.6px;
+            margin: 0 0 10px 0;
             text-align: left;
           }
 
@@ -425,43 +460,34 @@ export const AboutPedro: React.FC = () => {
           /* 3. FRASE PRINCIPAL */
           .about-mobile-lead {
             font-family: var(--font-body);
-            font-size: clamp(21px, 5.6vw, 25px);
-            font-weight: 700;
-            color: #f1f5f9;
-            line-height: 1.34;
-            letter-spacing: -0.3px;
-            margin: 0 0 26px 0;
+            font-size: 15.5px;
+            font-weight: 500;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin: 0 0 22px 0;
             text-align: left;
           }
 
-          /* 4. FOTO GRANDE DO PEDRO */
+          /* 4. FOTO DO PEDRO */
           .about-mobile-photo-frame {
             position: relative;
             width: 100%;
-            height: 480px;
-            margin: 0 0 30px 0;
+            height: 360px;
+            margin: 0 0 20px 0;
             border-radius: 20px;
             overflow: hidden;
-            background-color: #031109;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            background-color: #06140d;
+            border: 1px solid rgba(96, 227, 20, 0.25);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(96, 227, 20, 0.1);
           }
 
           .about-mobile-photo {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
+            object-position: center 22%;
             display: block;
-          }
-
-          .about-mobile-photo-fade-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 90px;
-            background: linear-gradient(to bottom, #031109 0%, rgba(3, 17, 9, 0.6) 50%, transparent 100%);
-            pointer-events: none;
+            filter: contrast(1.06) brightness(1.0);
           }
 
           .about-mobile-photo-fade-bottom {
@@ -469,30 +495,89 @@ export const AboutPedro: React.FC = () => {
             bottom: 0;
             left: 0;
             right: 0;
-            height: 130px;
-            background: linear-gradient(to top, #031109 0%, rgba(3, 17, 9, 0.85) 50%, transparent 100%);
+            height: 120px;
+            background: linear-gradient(to top, rgba(3, 17, 9, 0.95) 0%, rgba(3, 17, 9, 0.4) 45%, transparent 100%);
             pointer-events: none;
+            z-index: 1;
           }
 
-          .about-mobile-photo-fade-sides {
+          .about-mobile-photo-badge {
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at center, transparent 65%, rgba(3, 17, 9, 0.5) 100%);
-            pointer-events: none;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(6, 17, 12, 0.85);
+            border: 1px solid rgba(96, 227, 20, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 6px 14px;
+            border-radius: 999px;
+            color: #ffffff;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+            z-index: 2;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
           }
 
-          /* 5. TEXTO EXPLICATIVO & 7. TEXTO DE PROVA */
+          /* 5. STATS BAR */
+          .about-mobile-stats-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 14px 12px;
+            margin-bottom: 22px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+          }
+
+          .about-mobile-stat-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .about-mobile-stat-num {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 800;
+            color: #60e314;
+            line-height: 1.2;
+          }
+
+          .about-mobile-stat-lbl {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+            margin-top: 2px;
+          }
+
+          .about-mobile-stat-div {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          /* 6. TEXTO EXPLICATIVO */
           .about-mobile-text {
             font-family: var(--font-body);
-            font-size: 16px;
-            line-height: 1.62;
+            font-size: 15px;
+            line-height: 1.65;
             color: #94a3b8;
-            margin: 0 0 24px 0;
+            margin: 0 0 20px 0;
             text-align: left;
           }
 
           .about-mobile-text-proof {
-            margin: 0 0 28px 0;
+            margin: 0 0 24px 0;
+            color: #cbd5e1;
+            font-size: 14.5px;
           }
 
           .text-highlight-green {
@@ -500,49 +585,61 @@ export const AboutPedro: React.FC = () => {
             font-weight: 700;
           }
 
-          /* 6. TRÊS MINI CARDS DE BENEFÍCIOS */
-          .about-mobile-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 0 0 28px 0;
-          }
-
-          .about-mobile-card {
-            background: #06140d;
-            border: 1px solid rgba(96, 227, 20, 0.18);
-            border-radius: 12px;
-            padding: 14px 10px;
+          /* 7. PILARES HORIZONTAIS */
+          .about-mobile-pillars-list {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             gap: 10px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            margin: 0 0 22px 0;
           }
 
-          .about-mobile-card-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: rgba(96, 227, 20, 0.08);
-            border: 1px solid rgba(96, 227, 20, 0.2);
+          .about-mobile-pillar-card {
+            background: linear-gradient(135deg, rgba(8, 22, 16, 0.9) 0%, rgba(5, 14, 10, 0.95) 100%);
+            border: 1px solid rgba(96, 227, 20, 0.18);
+            border-radius: 14px;
+            padding: 14px 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+          }
+
+          .about-mobile-pillar-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(96, 227, 20, 0.1);
+            border: 1px solid rgba(96, 227, 20, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(96, 227, 20, 0.15);
           }
 
-          .about-mobile-card-title {
-            font-size: 12px;
-            font-weight: 600;
+          .about-mobile-pillar-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+          }
+
+          .about-mobile-pillar-title {
+            font-size: 14px;
+            font-weight: 700;
             color: #ffffff;
             line-height: 1.3;
-            text-align: left;
+          }
+
+          .about-mobile-pillar-desc {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.45;
           }
 
           /* 8. BOTÃO PRINCIPAL (CTA) */
           .about-mobile-cta-wrapper {
             width: 100%;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
           }
 
           .about-mobile-cta-btn {
@@ -551,12 +648,12 @@ export const AboutPedro: React.FC = () => {
             justify-content: center;
             gap: 8px;
             width: 100%;
-            height: 48px;
+            height: 50px;
             white-space: nowrap !important;
             background-color: #60e314;
             color: #000000;
             font-family: var(--font-heading);
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 800;
             letter-spacing: 0.2px;
             text-decoration: none;
@@ -574,9 +671,11 @@ export const AboutPedro: React.FC = () => {
 
           /* 9. MICROPROVAS ABAIXO DO BOTÃO */
           .about-mobile-microproofs {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
             width: 100%;
             margin-top: 4px;
           }
@@ -584,12 +683,10 @@ export const AboutPedro: React.FC = () => {
           .about-mobile-proof-item {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 5px;
-            font-size: 11px;
+            font-size: 11.5px;
             color: #94a3b8;
             font-weight: 500;
-            text-align: center;
             white-space: nowrap;
           }
         }
@@ -601,28 +698,21 @@ export const AboutPedro: React.FC = () => {
             padding-right: 16px;
           }
           .about-mobile-title {
-            font-size: 44px;
+            font-size: 32px;
           }
           .about-mobile-lead {
-            font-size: 19px;
+            font-size: 14.5px;
           }
           .about-mobile-photo-frame {
-            height: 420px;
-          }
-          .about-mobile-card {
-            padding: 10px 7px;
-          }
-          .about-mobile-card-title {
-            font-size: 11px;
+            height: 330px;
           }
           .about-mobile-cta-btn {
-            font-size: 11.5px !important;
-            height: 44px !important;
-            gap: 6px !important;
+            font-size: 12px !important;
+            height: 46px !important;
             white-space: nowrap !important;
           }
           .about-mobile-proof-item {
-            font-size: 9.8px;
+            font-size: 10.5px;
             gap: 3px;
           }
         }
